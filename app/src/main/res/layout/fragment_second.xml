@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <Button
+        android:id="@+id/btn_get_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:layout_marginHorizontal="110sp"
+        android:text="@string/btn_get_text" />
+
+    <TextView
+        android:id="@+id/textView_fact_text"
+        android:layout_width="match_parent"
+        android:layout_height="315sp"
+        android:textSize="19sp"
+        android:layout_below="@+id/btn_get_text"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="30sp"
+        android:background="@drawable/back"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btn_translate_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_fact_text"
+        android:layout_marginHorizontal="110sp"
+        android:layout_marginTop="30sp"
+        android:text="@string/btn_translate_text" />
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">wooppayTask1</string>
+    <string name="menu_item_1">Экран 1</string>
+    <string name="menu_item_2">Экран 2</string>
+    <string name="text_hint">Введите текст</string>
+    <string name="btn_first_text">Отправить</string>
+    <string name="btn_get_text">Получить факт</string>
+    <string name="btn_translate_text">Перевести текст</string>
+    <string name="cat_image_description">Cat image</string>
+</resources>
