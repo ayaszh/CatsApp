@@ -1,4 +1,4 @@
-package com.example.wooppaytask1.mvp;
+package com.example.wooppaytask1.mvp.view;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,12 +8,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class Fragment extends androidx.fragment.app.Fragment implements Presenter.PresenterListener {
+import com.example.wooppaytask1.mvp.MvpContract;
+import com.example.wooppaytask1.mvp.presenter.Presenter;
+
+public class Fragment extends androidx.fragment.app.Fragment implements MvpContract.View {
     /**
      * Пример работы с паттерном МВП
      */
 
-    private Presenter presenter;
+    private MvpContract.Presenter presenter;
 
     @Nullable
     @Override

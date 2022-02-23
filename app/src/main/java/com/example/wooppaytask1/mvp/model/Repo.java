@@ -1,10 +1,12 @@
-package com.example.wooppaytask1.mvp;
+package com.example.wooppaytask1.mvp.model;
 
-public class Model {
-    private final ModelListener listener;
+import com.example.wooppaytask1.mvp.MvpContract;
 
-    public Model(ModelListener listener) {
-        this.listener = listener;
+public class Repo implements MvpContract.Model {
+    private final RepoCallback callback;
+
+    public Repo(RepoCallback callback) {
+        this.callback = callback;
     }
 
     /**
@@ -13,10 +15,5 @@ public class Model {
      */
     public void asyncGetTextRequest() {
         //вызывает retrofit
-    }
-
-    public interface ModelListener {
-        void onSuccess(String text);
-        void onError();
     }
 }
