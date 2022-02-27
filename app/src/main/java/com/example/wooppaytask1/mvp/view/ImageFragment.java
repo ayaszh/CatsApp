@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.wooppaytask1.R;
 
 public class ImageFragment extends Fragment {
@@ -26,18 +27,20 @@ public class ImageFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        EditText user_field = view.findViewById(R.id.user_field);
-        Button btn_get_image = view.findViewById(R.id.btn_get_image);
-        ImageView imageView_get_image = view.findViewById(R.id.imageView_get_image);
+        EditText userField = view.findViewById(R.id.userField);
+        Button buttonGetImage = view.findViewById(R.id.buttonGetImage);
+        ImageView imageViewGetImage = view.findViewById(R.id.imageViewGetImage);
 
-        btn_get_image.setOnClickListener(view1 -> {
-            if(user_field.getText().toString().trim().equals(""))
-                user_field.setError("Недостаточно символов");
+        buttonGetImage.setOnClickListener(view1 -> {
+            if(userField.getText().toString().trim().equals(""))
+                userField.setError("Недостаточно символов");
             else {
-                String url = BASE_URL + user_field.getText();
+                String url = BASE_URL + userField.getText();
                 Glide.with(requireActivity())
                         .load(url)
-                        .into(imageView_get_image);
+                        .diskCacheStrategy(DiskCacheStrategy.NONE)
+                        .skipMemoryCache(true)
+                        .into(imageViewGetImage);
             }
         });
     }

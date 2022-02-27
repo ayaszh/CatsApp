@@ -5,7 +5,7 @@ public interface MvpContract {
     interface Model {
         interface ModelListener {
             void onFinished(String text);
-            void onFailure(Throwable t);
+            void onFailure(Throwable throwable);
         }
         void asyncGetFactRequest(ModelListener modelListener);
     }
@@ -16,6 +16,6 @@ public interface MvpContract {
 
     interface View {
         void showFact(String text);
-        void showError(Throwable t);
+        void showError(Throwable throwable);
     }
 }

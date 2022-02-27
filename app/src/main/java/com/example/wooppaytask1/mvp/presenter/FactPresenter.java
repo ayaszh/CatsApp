@@ -1,7 +1,7 @@
 package com.example.wooppaytask1.mvp.presenter;
 
 import com.example.wooppaytask1.mvp.contract.MvpContract;
-import com.example.wooppaytask1.mvp.model.FactListModel;
+import com.example.wooppaytask1.mvp.model.FactModel;
 
 public class FactPresenter implements MvpContract.Presenter, MvpContract.Model.ModelListener {
 
@@ -10,7 +10,7 @@ public class FactPresenter implements MvpContract.Presenter, MvpContract.Model.M
 
     public FactPresenter(MvpContract.View factView){
         this.factView = factView;
-        factModel = new FactListModel();
+        factModel = new FactModel();
     }
 
     @Override
@@ -24,7 +24,7 @@ public class FactPresenter implements MvpContract.Presenter, MvpContract.Model.M
     }
 
     @Override
-    public void onFailure(Throwable t) {
-        factView.showError(t);
+    public void onFailure(Throwable throwable) {
+        factView.showError(throwable);
     }
 }

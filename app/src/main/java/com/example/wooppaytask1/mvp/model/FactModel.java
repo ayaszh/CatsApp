@@ -11,7 +11,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class FactListModel implements MvpContract.Model {
+public class FactModel implements MvpContract.Model {
 
     @Override
     public void asyncGetFactRequest(final ModelListener modelListener) {
@@ -32,8 +32,8 @@ public class FactListModel implements MvpContract.Model {
             }
 
             @Override
-            public void onFailure(@NonNull Call<String> call, @NonNull Throwable t) {
-                modelListener.onFailure(t);
+            public void onFailure(@NonNull Call<String> call, @NonNull Throwable throwable) {
+                modelListener.onFailure(throwable);
             }
         });
     }

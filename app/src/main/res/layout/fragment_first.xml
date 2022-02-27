@@ -6,7 +6,7 @@
     tools:context=".mvp.view.ImageFragment">
 
     <EditText
-        android:id="@+id/user_field"
+        android:id="@+id/userField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50sp"
@@ -19,19 +19,19 @@
         tools:ignore="TextContrastCheck" />
 
     <Button
-        android:id="@+id/btn_get_image"
+        android:id="@+id/buttonGetImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/user_field"
+        android:layout_below="@id/userField"
         android:layout_marginTop="30sp"
         android:layout_marginHorizontal="120sp"
         android:text="@string/btn_first_text" />
 
     <ImageView
-        android:id="@+id/imageView_get_image"
+        android:id="@+id/imageViewGetImage"
         android:layout_width="match_parent"
         android:layout_height="300sp"
         android:contentDescription="@string/cat_image_description"
-        android:layout_below="@+id/btn_get_image"
+        android:layout_below="@+id/buttonGetImage"
         android:layout_marginTop="40sp" />
 </RelativeLayout>

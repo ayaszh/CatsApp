@@ -6,7 +6,7 @@
     tools:context=".mvp.view.FactFragment">
 
     <Button
-        android:id="@+id/btn_get_text"
+        android:id="@+id/buttonGetText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40sp"
@@ -14,11 +14,11 @@
         android:text="@string/btn_get_text" />
 
     <TextView
-        android:id="@+id/textView_fact_text"
+        android:id="@+id/textViewFact"
         android:layout_width="match_parent"
         android:layout_height="315sp"
         android:textSize="19sp"
-        android:layout_below="@+id/btn_get_text"
+        android:layout_below="@+id/buttonGetText"
         android:layout_marginHorizontal="30sp"
         android:layout_marginTop="30sp"
         android:background="@drawable/back"

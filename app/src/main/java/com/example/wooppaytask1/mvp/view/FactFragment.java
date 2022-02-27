@@ -19,8 +19,8 @@ public class FactFragment extends Fragment implements MvpContract.View {
 
     private MvpContract.Presenter presenter;
 
-    public Button btn_get_text;
-    public TextView textView_fact;
+    public Button buttonGetText;
+    public TextView textViewFact;
 
     public FactFragment() {
         super(R.layout.fragment_second);
@@ -30,23 +30,23 @@ public class FactFragment extends Fragment implements MvpContract.View {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        btn_get_text = view.findViewById(R.id.btn_get_text);
-        textView_fact = view.findViewById(R.id.textView_fact_text);
+        buttonGetText = view.findViewById(R.id.buttonGetText);
+        textViewFact = view.findViewById(R.id.textViewFact);
 
         presenter = new FactPresenter(this);
 
-        btn_get_text.setOnClickListener((v) -> {
+        buttonGetText.setOnClickListener((v) -> {
             presenter.getFactText();
         });
     }
 
     @Override
     public void showFact(String text) {
-        textView_fact.setText(text);
+        textViewFact.setText(text);
     }
 
     @Override
-    public void showError(Throwable t) {
+    public void showError(Throwable throwable) {
         Toast.makeText(requireActivity(), "Ошибка при получении данных", Toast.LENGTH_LONG).show();
     }
 }
