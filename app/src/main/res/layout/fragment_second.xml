@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    tools:context=".mvp.view.FactFragment">
 
     <Button
         android:id="@+id/btn_get_text"
@@ -23,14 +23,5 @@
         android:layout_marginTop="30sp"
         android:background="@drawable/back"
         android:textColor="@color/black"/>
-
-    <Button
-        android:id="@+id/btn_translate_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView_fact_text"
-        android:layout_marginHorizontal="110sp"
-        android:layout_marginTop="30sp"
-        android:text="@string/btn_translate_text" />
 
 </RelativeLayout>

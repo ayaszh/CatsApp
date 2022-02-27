@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".mvp.view.ImageFragment">
 
     <EditText
         android:id="@+id/user_field"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/user_field"
         android:layout_marginTop="30sp"
-        android:layout_marginHorizontal="140sp"
+        android:layout_marginHorizontal="120sp"
         android:text="@string/btn_first_text" />
 
     <ImageView
